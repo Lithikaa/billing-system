@@ -12,7 +12,7 @@ public class Home {
   JPanel homePanel;
 
   public Home() {
-    homeFrame = new JFrame("Login | VIT Billing System");
+    homeFrame = new JFrame("Login VIT Billing System");
     homeFrame.setSize(500, 300);
 
     homePanel = new JPanel(new MigLayout());
