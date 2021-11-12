@@ -17,8 +17,8 @@ public class Inventory {
         frame.setSize(800, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        String data[][] = { { "101", "Wheat", "670000", "90", "100", "Delete" },
-                { "102", "Rice", "780000", "20", "50", "Delete" }, { "103", "Sugar", "700000", "15", "20", "Delete" } };
+        String data[][] = { { "101", "Wheat", "670000", "90", "100", "Delete" },{ "102", "Rice", "780000", "20", "50", "Delete" }, 
+        { "103", "Sugar","700000", "15", "20", "Delete" } };
         String column[] = { "PRODUCT ID", "PRODUCT NAME", "QUANTITY", "PURCHASE PRICE", "SELLING PRICE", "EDIT" };
         JTable jt = new JTable(data, column);
         jt.setBounds(30, 40, 300, 400);

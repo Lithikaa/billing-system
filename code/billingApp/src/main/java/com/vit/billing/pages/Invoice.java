@@ -12,7 +12,7 @@ public class Invoice {
     JPanel invoicePanel;
 
     public Invoice() {
-        invoiceFrame = new JFrame("Invoice || VIT Billing System");
+        invoiceFrame = new JFrame("Invoice | VIT Billing System");
         invoiceFrame.setSize(500, 300);
 
         invoicePanel = new JPanel(new MigLayout());
