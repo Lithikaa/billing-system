@@ -1,105 +1,54 @@
 package com.vit.billing.pages;
 
-import javax.swing.JFrame;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.FontUIResource;
 
-import com.vit.billing.utils.Database;
-
-import net.miginfocom.swing.MigLayout;
-
 public class Login {
-
-  Database database;
-
   JFrame loginFrame;
-  JPanel loginPanel;
+  JButton loginBttn;
+  JButton cancelBttn;
 
-  JLabel errorLabel = new JLabel("");
-
-  JLabel usernameLabel = new JLabel("Username..");
-  JLabel passwordLabel = new JLabel("Password");
-  JTextField usernameField = new JTextField(20);
-  JPasswordField passwordField = new JPasswordField(20);
-
-  public void createLoginForm(JPanel panel, JFrame frame) {
-
-    panel.add(usernameLabel, "align label");
-    panel.add(usernameField, "wrap");
-    panel.add(passwordLabel, "align label");
-    panel.add(passwordField, "wrap");
-    panel.add(errorLabel, "wrap, gapbottom 20");
-
-    JButton okBttn = new JButton("Login");
-    okBttn.addActionListener(new java.awt.event.ActionListener() {
+  public Login() {
+    loginFrame = new JFrame("Login | VIT Billing System");
+    loginBttn = new JButton("Login");
+    loginBttn.setBounds(660, 150, 100, 40);
+    cancelBttn = new JButton("Exit");
+    cancelBttn.setBounds(660, 200, 100, 40);
+    loginBttn.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent e) {
-        String username = usernameField.getText();
-        String password = new String(passwordField.getPassword());
 
-        // if (username.equals("admin") || password.equals("password")) {
-        // loginFrame.dispose();
-        // new Home();
-        // } else {
-        // errorLabel.setText("Please enter username and password");
-        // }
+        loginFrame.dispose();
+        Signin signin = new Signin();
 
-        if (username.equals("") || password.equals("")) {
-          errorLabel.setText("Please enter username and password");
-        } else {
-          try {
-            if (database.authenticate(username, password)) {
-              loginFrame.dispose();
-              System.out.println("Login Successful");
-              new Home();
-            } else {
-              errorLabel.setText("Invalid username or password");
-            }
-          } catch (Exception e1) {
-            e1.printStackTrace();
-          }
-        }
       }
+
     });
-    JButton cancelBttn = new JButton("Exit");
+
     cancelBttn.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent e) {
         System.exit(0);
       }
     });
-    // tag identifies the type of button
-    panel.add(okBttn, "tag ok, span, split 3, sizegroup bttn");
-    // sizegroups set all members to the size of the biggest member
-    panel.add(cancelBttn, "tag cancel, sizegroup bttn");
 
-  }
-
-  public Login(Database db) {
-
-    database = db;
-
-    loginFrame = new JFrame("Login | VIT Billing System");
-    loginFrame.setSize(500, 300);
-
-    loginPanel = new JPanel(new MigLayout());
-
-    JLabel loginTitle = new JLabel("Login | VIT Billing System");
-    loginTitle.setFont(new FontUIResource("Noto Sans", FontUIResource.BOLD, 20));
+    JLabel loginTitle = new JLabel("VIT Billing System");
+    loginTitle.setFont(new FontUIResource("Noto Sans", FontUIResource.BOLD, 25));
     loginTitle.setBorder(new EmptyBorder(10, 10, 10, 10));
+    loginTitle.setBounds(600, 25, 400, 40);
+    JLabel Title = new JLabel("Welcomes You");
+    Title.setFont(new FontUIResource("Noto Sans", FontUIResource.BOLD, 25));
+    Title.setBorder(new EmptyBorder(10, 10, 10, 10));
+    Title.setBounds(620, 85, 400, 40);
+    loginFrame.add(loginTitle);
+    loginFrame.add(Title);
 
-    loginPanel.add(loginTitle, "wrap");
-    createLoginForm(loginPanel, loginFrame);
+    loginFrame.add(loginBttn);
+    loginFrame.add(cancelBttn);
+    loginFrame.setSize(1650, 1080);
 
-    loginFrame.add(loginPanel);
-    loginFrame.pack();
-    loginFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    loginFrame.setLocationRelativeTo(null);
+    loginFrame.setLayout(null);
     loginFrame.setVisible(true);
   }
 }

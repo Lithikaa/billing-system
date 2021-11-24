@@ -4,7 +4,6 @@ import javax.swing.*;
 import com.formdev.flatlaf.*;
 
 import com.vit.billing.pages.Login;
-import com.vit.billing.utils.Database;
 
 /**
  * Hello world!
@@ -13,13 +12,11 @@ import com.vit.billing.utils.Database;
 public class App {
     public static void main(String[] args) {
         try {
-            UIManager.setLookAndFeel(new FlatDarkLaf());
+            UIManager.setLookAndFeel(new FlatLightLaf());
         } catch (Exception ex) {
             System.err.println("Failed to initialize LaF");
         }
 
-        Database db = new Database();
-
-        Login login = new Login(db);
+        Login login = new Login();
     }
 }
