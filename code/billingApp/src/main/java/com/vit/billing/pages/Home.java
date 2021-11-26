@@ -32,7 +32,12 @@ public class Home {
       public void actionPerformed(java.awt.event.ActionEvent e) {
 
         homeFrame.dispose();
-        new Inventory();
+        SwingUtilities.invokeLater(new Runnable() {
+          @Override
+          public void run() {
+            new Inventory().createAndShowGui();
+          }
+        });
 
       }
 
