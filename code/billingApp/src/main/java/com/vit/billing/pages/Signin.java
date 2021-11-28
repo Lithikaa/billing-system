@@ -65,10 +65,10 @@ public class Signin {
     cancelBttn.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent e) {
         new Login();
-          
+
         signInFrame.setVisible(false);
-         signInFrame.dispose();
-        
+        signInFrame.dispose();
+
       }
     });
 
