@@ -47,7 +47,7 @@ public class Signin {
       public void actionPerformed(java.awt.event.ActionEvent e) {
         String userName = userNameText.getText();
         String password = passwordText.getText();
-        if (userName.equals("jeeva") && password.equals("1234")) {
+        if (userName.equals("admin") && password.equals("admin")) {
           signInFrame.dispose();
           System.out.println("Login Successful");
           new Home();
