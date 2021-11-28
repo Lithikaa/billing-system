@@ -19,7 +19,7 @@ public class Signin {
     passwordText.setBounds(700, 200, 150, 30);
     JButton submitBttn = new JButton("Submit");
     submitBttn.setBounds(700, 250, 100, 40);
-    JButton cancelBttn = new JButton("Exit");
+    JButton cancelBttn = new JButton("Back");
     cancelBttn.setBounds(700, 300, 100, 40);
     JLabel invalid = new JLabel("");
     invalid.setBounds(675, 360, 300, 50);
@@ -47,7 +47,6 @@ public class Signin {
       public void actionPerformed(java.awt.event.ActionEvent e) {
         String userName = userNameText.getText();
         String password = passwordText.getText();
-        System.out.println(userName + "," + password);
         if (userName.equals("jeeva") && password.equals("1234")) {
           signInFrame.dispose();
           System.out.println("Login Successful");
@@ -65,7 +64,11 @@ public class Signin {
 
     cancelBttn.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent e) {
-        System.exit(0);
+        new Login();
+          
+        signInFrame.setVisible(false);
+         signInFrame.dispose();
+        
       }
     });
 

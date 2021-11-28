@@ -8,27 +8,27 @@ import java.time.LocalDateTime;
 
 public class Invoice {
 
-    JButton b1, b2, b3, b4, b5;
-    JCheckBox cb1, cb2, cb3, cb4, cb5;
+    JButton generatebttn, backbttn, printbttn, calcibttn, clearbttn;
+    JCheckBox wheatcb, ricecb, sugarcb, oilcb, cerealscb;
 
-    JLabel l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, lspl, l12, l13, l14, l15, l16, l17, l18, l19, l20, l21, l22,
-            l23, lq1, lq2, lq3, lq4, lq5, r1, r2, r3, r4, r5, a1, a2, a3, a4, a5, t;
+    JLabel titlelb, addresslb, billnolb, datelb, itemlb, qntlb, wheatlb, ricelb, sugarlb, oillb, cerealslb, lspl, productlb, dashlb2, quantitylb, titlelb5, titlelb6, titlelb7, titlelb8, titlelb9, ratelb, amountlb, dashlb3,
+            totallb, lq1, lq2, lq3, lq4, lq5, r1, r2, r3, r4, r5, a1, a2, a3, a4, a5, t;
     JTextField t1, t2, t3, t4, t5, t6, t7;
 
     public Invoice() {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
-        JFrame f = new JFrame("INVOICE");
-        f.setBounds(0, 0, 800, 600);
+        JFrame Invoiceframe = new JFrame("INVOICE");
+        Invoiceframe.setBounds(0, 0, 800, 600);
 
-        l1 = new JLabel("VIT BILLING SYSTEM");
-        l1.setBounds(555, 25, 300, 30);
-        l1.setFont(new Font("Verdana", Font.PLAIN, 20));
-        l2 = new JLabel("Chennai-600028");
-        l2.setBounds(580, 50, 200, 30);
-        l2.setFont(new Font("Verdana", Font.PLAIN, 20));
-        l3 = new JLabel("Bill no:");
-        l3.setBounds(880, 75, 300, 30);
+        titlelb = new JLabel("VIT BILLING SYSTEM");
+        titlelb.setBounds(555, 25, 300, 30);
+        titlelb.setFont(new Font("Verdana", Font.PLAIN, 20));
+        addresslb = new JLabel("Chennai-600028");
+        addresslb.setBounds(580, 50, 200, 30);
+        addresslb.setFont(new Font("Verdana", Font.PLAIN, 20));
+        billnolb = new JLabel("Bill no:");
+        billnolb.setBounds(880, 75, 300, 30);
         t1 = new JTextField();
         t1.setBounds(930, 80, 50, 20);
         t2 = new JTextField();
@@ -41,79 +41,79 @@ public class Invoice {
         t5.setBounds(880, 275, 50, 20);
         t6 = new JTextField();
         t6.setBounds(880, 305, 50, 20);
-        l4 = new JLabel("Date and Time:" + dtf.format(now));
-        l4.setBounds(860, 95, 300, 30);
-        l5 = new JLabel("PRODUCT ITEMS:");
-        l5.setBounds(390, 160, 300, 30);
-        l6 = new JLabel("QUANTITY IN KG/L:");
-        l6.setBounds(810, 150, 300, 30);
-        l7 = new JLabel("wheat:");
-        l7.setBounds(830, 180, 300, 30);
-        l8 = new JLabel("rice:");
-        l8.setBounds(830, 210, 300, 30);
-        l9 = new JLabel("sugar:");
-        l9.setBounds(830, 240, 300, 30);
-        l10 = new JLabel("oil:");
-        l10.setBounds(830, 270, 300, 30);
-        l11 = new JLabel("cereals:");
-        l11.setBounds(830, 300, 300, 30);
-        l6.setFont(new Font("Verdana", Font.PLAIN, 16));
-        l5.setFont(new Font("Verdana", Font.PLAIN, 16));
-        cb1 = new JCheckBox("WHEAT");
-        cb1.setBounds(410, 190, 150, 20);
-        cb2 = new JCheckBox("RICE");
-        cb2.setBounds(410, 210, 150, 20);
-        cb3 = new JCheckBox("SUGAR");
-        cb3.setBounds(410, 230, 150, 20);
-        cb4 = new JCheckBox("OIL");
-        cb4.setBounds(410, 250, 150, 20);
-        cb5 = new JCheckBox("CEREALS");
-        cb5.setBounds(410, 270, 150, 20);
+        datelb = new JLabel("Date and Time:" + dtf.format(now));
+        datelb.setBounds(860, 95, 300, 30);
+        itemlb = new JLabel("PRODUCT ITEMS:");
+        itemlb.setBounds(390, 160, 300, 30);
+        qntlb = new JLabel("QUANTITY IN KG/L:");
+        qntlb.setBounds(810, 150, 300, 30);
+        wheatlb = new JLabel("wheat:");
+        wheatlb.setBounds(830, 180, 300, 30);
+        ricelb = new JLabel("rice:");
+        ricelb.setBounds(830, 210, 300, 30);
+        sugarlb = new JLabel("sugar:");
+        sugarlb.setBounds(830, 240, 300, 30);
+        oillb = new JLabel("oil:");
+        oillb.setBounds(830, 270, 300, 30);
+        cerealslb = new JLabel("cereals:");
+        cerealslb.setBounds(830, 300, 300, 30);
+        qntlb.setFont(new Font("Verdana", Font.PLAIN, 16));
+        itemlb.setFont(new Font("Verdana", Font.PLAIN, 16));
+        wheatcb = new JCheckBox("WHEAT");
+        wheatcb.setBounds(410, 190, 150, 20);
+        ricecb = new JCheckBox("RICE");
+        ricecb.setBounds(410, 210, 150, 20);
+        sugarcb = new JCheckBox("SUGAR");
+        sugarcb.setBounds(410, 230, 150, 20);
+        oilcb = new JCheckBox("OIL");
+        oilcb.setBounds(410, 250, 150, 20);
+        cerealscb = new JCheckBox("CEREALS");
+        cerealscb.setBounds(410, 270, 150, 20);
         t7 = new JTextField();
         t7.setBounds(940, 555, 50, 20);
-        f.add(t7);
+        Invoiceframe.add(t7);
 
         lspl = new JLabel(
                 "-----------------------------------------------------------------------------------------------------------------------------");
         lspl.setBounds(400, 380, 800, 30);
-        f.add(lspl);
-        l12 = new JLabel("PRODUCT NAME");
-        l12.setBounds(415, 400, 300, 30);
-        f.add(l12);
-        l13 = new JLabel(
+        Invoiceframe.add(lspl);
+        productlb = new JLabel("PRODUCT NAME");
+        productlb.setBounds(415, 400, 300, 30);
+        Invoiceframe.add(productlb);
+        dashlb2 = new JLabel(
                 "-----------------------------------------------------------------------------------------------------------------------------");
-        l13.setBounds(400, 410, 800, 30);
-        f.add(l13);
-        l22 = new JLabel(
+        dashlb2.setBounds(400, 410, 800, 30);
+        Invoiceframe.add(dashlb2);
+        dashlb3 = new JLabel(
                 "-----------------------------------------------------------------------------------------------------------------------------");
-        l22.setBounds(400, 530, 800, 30);
-        f.add(l22);
-        l14 = new JLabel("QUANTITY");
-        l14.setBounds(590, 400, 300, 30);
-        f.add(l14);
-        l20 = new JLabel("RATE");
-        l20.setBounds(765, 400, 300, 30);
-        f.add(l20);
-        l21 = new JLabel("AMOUNT");
-        l21.setBounds(940, 400, 300, 30);
-        f.add(l21);
-        l23 = new JLabel("TOTAL:");
-        l23.setBounds(890, 550, 300, 30);
-        f.add(l23);
-        b1 = new JButton("Generate");
-        b1.setBounds(390, 320, 120, 30);
-        b2 = new JButton("Exit");
-        b2.setBounds(890, 25, 120, 30);
-        b3 = new JButton("Printbill");
-        b3.setBounds(910, 600, 120, 30);
-        b4 = new JButton("Calculator");
-        b4.setBounds(360, 95, 120, 30);
-        b5 = new JButton("Clear");
-        b5.setBounds(360, 600, 120, 30);
-        b5.addActionListener(new java.awt.event.ActionListener() {
+        dashlb3.setBounds(400, 530, 800, 30);
+        Invoiceframe.add(dashlb3);
+        quantitylb = new JLabel("QUANTITY");
+        quantitylb.setBounds(590, 400, 300, 30);
+        Invoiceframe.add(quantitylb);
+        ratelb = new JLabel("RATE");
+        ratelb.setBounds(765, 400, 300, 30);
+        Invoiceframe.add(ratelb);
+        amountlb = new JLabel("AMOUNT");
+        amountlb.setBounds(940, 400, 300, 30);
+        Invoiceframe.add(amountlb);
+        totallb = new JLabel("TOTAL:");
+        totallb.setBounds(890, 550, 300, 30);
+        Invoiceframe.add(totallb);
+        generatebttn = new JButton("Generate");
+        generatebttn.setBounds(390, 320, 120, 30);
+        backbttn = new JButton("Back");
+        backbttn.setBounds(890, 25, 120, 30);
+        printbttn = new JButton("Printbill");
+        printbttn.setBounds(910, 600, 120, 30);
+        calcibttn = new JButton("Calculator");
+        calcibttn.setBounds(360, 95, 120, 30);
+        clearbttn = new JButton("Clear");
+        clearbttn.setBounds(360, 600, 120, 30);
+        clearbttn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent e) {
-                if (cb1.isSelected()) {
-                    l15.setText("");
+                if (wheatcb.isSelected()) {
+                    titlelb5.setText("");
                     lq1.setText("");
                     r1.setText("");
                     a1.setText("");
@@ -121,29 +121,29 @@ public class Invoice {
 
                 }
 
-                if (cb2.isSelected()) {
-                    l16.setText("");
+                if (ricecb.isSelected()) {
+                    titlelb6.setText("");
                     lq2.setText("");
                     r2.setText("");
                     a2.setText("");
                     t7.setText("");
                 }
-                if (cb3.isSelected()) {
-                    l17.setText("");
+                if (sugarcb.isSelected()) {
+                    titlelb7.setText("");
                     lq3.setText("");
                     r3.setText("");
                     a3.setText("");
                     t7.setText("");
                 }
-                if (cb4.isSelected()) {
-                    l18.setText("");
+                if (oilcb.isSelected()) {
+                    titlelb8.setText("");
                     lq4.setText("");
                     r4.setText("");
                     a4.setText("");
                     t7.setText("");
                 }
-                if (cb5.isSelected()) {
-                    l19.setText("");
+                if (cerealscb.isSelected()) {
+                    titlelb9.setText("");
                     lq5.setText("");
                     r5.setText("");
                     a5.setText("");
@@ -151,13 +151,20 @@ public class Invoice {
                 }
             }
         });
-        b2.addActionListener(new java.awt.event.ActionListener() {
+        backbttn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent e) {
-                System.out.println("Logout Successful");
-                System.exit(0);
+                new Home();
+          
+                Invoiceframe.setVisible(false);
+                 Invoiceframe.dispose();
             }
         });
-        b4.addActionListener(new java.awt.event.ActionListener() {
+        printbttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                System.out.println("Bill Printed Sucessfully");
+            }
+        });
+        calcibttn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent e) {
 
                 new Calculator();
@@ -165,68 +172,52 @@ public class Invoice {
             }
 
         });
-        b1.addActionListener(new ActionListener() {
+        generatebttn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                /*
-                 * t7=new JTextField(); t7.setBounds(630,555, 50,20); f.add(t7);
-                 * 
-                 * lspl=new JLabel(
-                 * "-----------------------------------------------------------------------------------------------------------------------------"
-                 * ); lspl.setBounds(90,380, 800,30); f.add(lspl); l12=new
-                 * JLabel("PRODUCT NAME"); l12.setBounds(105,400, 300,30); f.add(l12); l13=new
-                 * JLabel(
-                 * "-----------------------------------------------------------------------------------------------------------------------------"
-                 * ); l13.setBounds(90,410, 800,30); f.add(l13); l22=new JLabel(
-                 * "-----------------------------------------------------------------------------------------------------------------------------"
-                 * ); l22.setBounds(90,530, 800,30); f.add(l22); l14=new JLabel("QUANTITY");
-                 * l14.setBounds(280,400, 300,30); f.add(l14); l20=new JLabel("RATE");
-                 * l20.setBounds(455,400, 300,30); f.add(l20); l21=new JLabel("AMOUNT");
-                 * l21.setBounds(630,400, 300,30); f.add(l21); l23=new JLabel("TOTAL:");
-                 * l23.setBounds(580,550, 300,30); f.add(l23);
-                 */
+                
 
-                if (cb1.isSelected()) {
-                    l15 = new JLabel("wheat");
-                    l15.setBounds(445, 430, 300, 30);
-                    f.add(l15);
+                if (wheatcb.isSelected()) {
+                    titlelb5 = new JLabel("wheat");
+                    titlelb5.setBounds(445, 430, 300, 30);
+                    Invoiceframe.add(titlelb5);
 
                     String q1 = t2.getText();
                     lq1 = new JLabel();
                     lq1.setText(String.valueOf(q1));
                     lq1.setBounds(600, 430, 300, 30);
-                    f.add(lq1);
+                    Invoiceframe.add(lq1);
                     r1 = new JLabel("100");
                     r1.setBounds(770, 430, 300, 30);
-                    f.add(r1);
+                    Invoiceframe.add(r1);
                     a1 = new JLabel();
                     float amount = 100 * Float.parseFloat(q1);
                     String am = String.valueOf(amount);
                     a1.setText(String.valueOf(am));
                     a1.setBounds(950, 430, 300, 30);
-                    f.add(a1);
+                    Invoiceframe.add(a1);
                     t7.setText(String.valueOf(am));
 
                 }
-                if (cb2.isSelected()) {
+                if (ricecb.isSelected()) {
 
                     String q2 = t3.getText();
-                    if (cb1.isSelected()) {
-                        l16 = new JLabel("rice");
-                        l16.setBounds(445, 450, 300, 30);
-                        f.add(l16);
+                    if (wheatcb.isSelected()) {
+                        titlelb6 = new JLabel("rice");
+                        titlelb6.setBounds(445, 450, 300, 30);
+                        Invoiceframe.add(titlelb6);
                         lq2 = new JLabel();
                         lq2.setText(String.valueOf(q2));
                         lq2.setBounds(600, 450, 300, 30);
-                        f.add(lq2);
+                        Invoiceframe.add(lq2);
                         r2 = new JLabel("50");
                         r2.setBounds(770, 450, 300, 30);
-                        f.add(r2);
+                        Invoiceframe.add(r2);
                         a2 = new JLabel();
                         float amount = 50 * Float.parseFloat(q2);
                         String am = String.valueOf(amount);
                         a2.setText(String.valueOf(am));
                         a2.setBounds(950, 450, 300, 30);
-                        f.add(a2);
+                        Invoiceframe.add(a2);
                         String amount1 = a1.getText();
                         String amount2 = a2.getText();
                         float am1 = Float.parseFloat(amount1);
@@ -236,46 +227,46 @@ public class Invoice {
                         t7.setText(String.valueOf(tl));
 
                     } else {
-                        l16 = new JLabel("rice");
-                        l16.setBounds(445, 430, 300, 30);
-                        f.add(l16);
+                        titlelb6 = new JLabel("rice");
+                        titlelb6.setBounds(445, 430, 300, 30);
+                        Invoiceframe.add(titlelb6);
                         lq2 = new JLabel();
                         lq2.setText(String.valueOf(q2));
                         lq2.setBounds(600, 430, 300, 30);
-                        f.add(lq2);
+                        Invoiceframe.add(lq2);
                         r2 = new JLabel("50");
                         r2.setBounds(770, 430, 300, 30);
-                        f.add(r2);
+                        Invoiceframe.add(r2);
                         a2 = new JLabel();
                         float amount = 50 * Float.parseFloat(q2);
                         String am = String.valueOf(amount);
                         a2.setText(String.valueOf(am));
                         a2.setBounds(950, 430, 300, 30);
-                        f.add(a2);
+                        Invoiceframe.add(a2);
                         t7.setText(String.valueOf(am));
 
                     }
                 }
-                if (cb3.isSelected()) {
+                if (sugarcb.isSelected()) {
 
-                    if (cb1.isSelected() && cb2.isSelected()) {
-                        l17 = new JLabel("sugar");
-                        l17.setBounds(445, 470, 300, 30);
-                        f.add(l17);
+                    if (wheatcb.isSelected() && ricecb.isSelected()) {
+                        titlelb7 = new JLabel("sugar");
+                        titlelb7.setBounds(445, 470, 300, 30);
+                        Invoiceframe.add(titlelb7);
                         String q3 = t4.getText();
                         lq3 = new JLabel();
                         lq3.setText(String.valueOf(q3));
                         lq3.setBounds(600, 470, 300, 30);
-                        f.add(lq3);
+                        Invoiceframe.add(lq3);
                         r3 = new JLabel("20");
                         r3.setBounds(770, 470, 300, 30);
-                        f.add(r3);
+                        Invoiceframe.add(r3);
                         a3 = new JLabel();
                         float amount = 20 * Float.parseFloat(q3);
                         String am = String.valueOf(amount);
                         a3.setText(String.valueOf(am));
                         a3.setBounds(950, 470, 300, 30);
-                        f.add(a3);
+                        Invoiceframe.add(a3);
                         String amount1 = a1.getText();
                         String amount2 = a2.getText();
                         String amount3 = a3.getText();
@@ -288,24 +279,24 @@ public class Invoice {
 
                     }
 
-                    else if (cb1.isSelected()) {
-                        l17 = new JLabel("sugar");
-                        l17.setBounds(445, 450, 300, 30);
-                        f.add(l17);
+                    else if (wheatcb.isSelected()) {
+                        titlelb7 = new JLabel("sugar");
+                        titlelb7.setBounds(445, 450, 300, 30);
+                        Invoiceframe.add(titlelb7);
                         String q3 = t4.getText();
                         lq3 = new JLabel();
                         lq3.setText(String.valueOf(q3));
                         lq3.setBounds(600, 450, 300, 30);
-                        f.add(lq3);
+                        Invoiceframe.add(lq3);
                         r3 = new JLabel("20");
                         r3.setBounds(770, 450, 300, 30);
-                        f.add(r3);
+                        Invoiceframe.add(r3);
                         a3 = new JLabel();
                         float amount = 20 * Float.parseFloat(q3);
                         String am = String.valueOf(amount);
                         a3.setText(String.valueOf(am));
                         a3.setBounds(950, 450, 300, 30);
-                        f.add(a3);
+                        Invoiceframe.add(a3);
                         String amount1 = a1.getText();
                         String amount3 = a3.getText();
                         float am1 = Float.parseFloat(amount1);
@@ -316,24 +307,24 @@ public class Invoice {
 
                     }
 
-                    else if (cb2.isSelected()) {
-                        l17 = new JLabel("sugar");
-                        l17.setBounds(445, 450, 300, 30);
-                        f.add(l17);
+                    else if (ricecb.isSelected()) {
+                        titlelb7 = new JLabel("sugar");
+                        titlelb7.setBounds(445, 450, 300, 30);
+                        Invoiceframe.add(titlelb7);
                         String q3 = t4.getText();
                         lq3 = new JLabel();
                         lq3.setText(String.valueOf(q3));
                         lq3.setBounds(600, 450, 300, 30);
-                        f.add(lq3);
+                        Invoiceframe.add(lq3);
                         r3 = new JLabel("20");
                         r3.setBounds(770, 450, 300, 30);
-                        f.add(r3);
+                        Invoiceframe.add(r3);
                         a3 = new JLabel();
                         float amount = 20 * Float.parseFloat(q3);
                         String am = String.valueOf(amount);
                         a3.setText(String.valueOf(am));
                         a3.setBounds(950, 450, 300, 30);
-                        f.add(a3);
+                        Invoiceframe.add(a3);
                         String amount2 = a2.getText();
                         String amount3 = a3.getText();
                         float am2 = Float.parseFloat(amount2);
@@ -342,46 +333,46 @@ public class Invoice {
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
                     } else {
-                        l17 = new JLabel("sugar");
-                        l17.setBounds(445, 430, 300, 30);
-                        f.add(l17);
+                        titlelb7 = new JLabel("sugar");
+                        titlelb7.setBounds(445, 430, 300, 30);
+                        Invoiceframe.add(titlelb7);
                         String q3 = t4.getText();
                         lq3 = new JLabel();
                         lq3.setText(String.valueOf(q3));
                         lq3.setBounds(600, 430, 300, 30);
-                        f.add(lq3);
+                        Invoiceframe.add(lq3);
                         r3 = new JLabel("20");
                         r3.setBounds(770, 430, 300, 30);
-                        f.add(r3);
+                        Invoiceframe.add(r3);
                         a3 = new JLabel();
                         float amount = 20 * Float.parseFloat(q3);
                         String am = String.valueOf(amount);
                         a3.setText(String.valueOf(am));
                         a3.setBounds(950, 430, 300, 30);
-                        f.add(a3);
+                        Invoiceframe.add(a3);
                         t7.setText(String.valueOf(am));
                     }
                 }
-                if (cb4.isSelected()) {
+                if (oilcb.isSelected()) {
 
-                    if (cb1.isSelected() && cb2.isSelected() && cb3.isSelected()) {
-                        l18 = new JLabel("oil");
-                        l18.setBounds(445, 490, 300, 30);
-                        f.add(l18);
+                    if (wheatcb.isSelected() && ricecb.isSelected() && sugarcb.isSelected()) {
+                        titlelb8 = new JLabel("oil");
+                        titlelb8.setBounds(445, 490, 300, 30);
+                        Invoiceframe.add(titlelb8);
                         String q4 = t5.getText();
                         lq4 = new JLabel();
                         lq4.setText(String.valueOf(q4));
                         lq4.setBounds(600, 490, 300, 30);
-                        f.add(lq4);
+                        Invoiceframe.add(lq4);
                         r4 = new JLabel("50");
                         r4.setBounds(770, 490, 300, 30);
-                        f.add(r4);
+                        Invoiceframe.add(r4);
                         a4 = new JLabel();
                         float amount = 50 * Float.parseFloat(q4);
                         String am = String.valueOf(amount);
                         a4.setText(String.valueOf(am));
                         a4.setBounds(950, 490, 300, 30);
-                        f.add(a4);
+                        Invoiceframe.add(a4);
                         String amount1 = a1.getText();
                         String amount2 = a2.getText();
                         String amount3 = a3.getText();
@@ -394,24 +385,24 @@ public class Invoice {
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
                     } 
-                    else if (cb2.isSelected() && cb3.isSelected()) {
-                        l18 = new JLabel("oil");
-                        l18.setBounds(445, 470, 300, 30);
-                        f.add(l18);
+                    else if (ricecb.isSelected() && sugarcb.isSelected()) {
+                        titlelb8 = new JLabel("oil");
+                        titlelb8.setBounds(445, 470, 300, 30);
+                        Invoiceframe.add(titlelb8);
                         String q4 = t5.getText();
                         lq4 = new JLabel();
                         lq4.setText(String.valueOf(q4));
                         lq4.setBounds(600, 470, 300, 30);
-                        f.add(lq4);
+                        Invoiceframe.add(lq4);
                         r4 = new JLabel("50");
                         r4.setBounds(770, 470, 300, 30);
-                        f.add(r4);
+                        Invoiceframe.add(r4);
                         a4 = new JLabel();
                         float amount = 50 * Float.parseFloat(q4);
                         String am = String.valueOf(amount);
                         a4.setText(String.valueOf(am));
                         a4.setBounds(950, 470, 300, 30);
-                        f.add(a4);
+                        Invoiceframe.add(a4);
                         String amount2 = a2.getText();
                         String amount3 = a3.getText();
                         String amount4 = a4.getText();
@@ -422,24 +413,24 @@ public class Invoice {
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
 
-                    } else if (cb1.isSelected() && cb3.isSelected()) {
-                        l18 = new JLabel("oil");
-                        l18.setBounds(445, 470, 300, 30);
-                        f.add(l18);
+                    } else if (wheatcb.isSelected() && sugarcb.isSelected()) {
+                        titlelb8 = new JLabel("oil");
+                        titlelb8.setBounds(445, 470, 300, 30);
+                        Invoiceframe.add(titlelb8);
                         String q4 = t5.getText();
                         lq4 = new JLabel();
                         lq4.setText(String.valueOf(q4));
                         lq4.setBounds(600, 470, 300, 30);
-                        f.add(lq4);
+                        Invoiceframe.add(lq4);
                         r4 = new JLabel("50");
                         r4.setBounds(770, 470, 300, 30);
-                        f.add(r4);
+                        Invoiceframe.add(r4);
                         a4 = new JLabel();
                         float amount = 50 * Float.parseFloat(q4);
                         String am = String.valueOf(amount);
                         a4.setText(String.valueOf(am));
                         a4.setBounds(950, 470, 300, 30);
-                        f.add(a4);
+                        Invoiceframe.add(a4);
                         String amount1 = a1.getText();
                         String amount3 = a3.getText();
                         String amount4 = a4.getText();
@@ -451,24 +442,24 @@ public class Invoice {
                         t7.setText(String.valueOf(tl));
                     }
 
-                    else if (cb1.isSelected() && cb2.isSelected()) {
-                        l18 = new JLabel("oil");
-                        l18.setBounds(445, 470, 300, 30);
-                        f.add(l18);
+                    else if (wheatcb.isSelected() && ricecb.isSelected()) {
+                        titlelb8 = new JLabel("oil");
+                        titlelb8.setBounds(445, 470, 300, 30);
+                        Invoiceframe.add(titlelb8);
                         String q4 = t5.getText();
                         lq4 = new JLabel();
                         lq4.setText(String.valueOf(q4));
                         lq4.setBounds(600, 470, 300, 30);
-                        f.add(lq4);
+                        Invoiceframe.add(lq4);
                         r4 = new JLabel("50");
                         r4.setBounds(770, 470, 300, 30);
-                        f.add(r4);
+                        Invoiceframe.add(r4);
                         a4 = new JLabel();
                         float amount = 50 * Float.parseFloat(q4);
                         String am = String.valueOf(amount);
                         a4.setText(String.valueOf(am));
                         a4.setBounds(950, 470, 300, 30);
-                        f.add(a4);
+                        Invoiceframe.add(a4);
                         String amount1 = a1.getText();
                         String amount2 = a2.getText();
                         String amount4 = a4.getText();
@@ -478,24 +469,24 @@ public class Invoice {
                         float total = am1 + am2 + am4;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb3.isSelected()) {
-                        l18 = new JLabel("oil");
-                        l18.setBounds(445, 450, 300, 30);
-                        f.add(l18);
+                    } else if (sugarcb.isSelected()) {
+                        titlelb8 = new JLabel("oil");
+                        titlelb8.setBounds(445, 450, 300, 30);
+                        Invoiceframe.add(titlelb8);
                         String q4 = t5.getText();
                         lq4 = new JLabel();
                         lq4.setText(String.valueOf(q4));
                         lq4.setBounds(600, 450, 300, 30);
-                        f.add(lq4);
+                        Invoiceframe.add(lq4);
                         r4 = new JLabel("50");
                         r4.setBounds(770, 450, 300, 30);
-                        f.add(r4);
+                        Invoiceframe.add(r4);
                         a4 = new JLabel();
                         float amount = 50 * Float.parseFloat(q4);
                         String am = String.valueOf(amount);
                         a4.setText(String.valueOf(am));
                         a4.setBounds(950, 450, 300, 30);
-                        f.add(a4);
+                        Invoiceframe.add(a4);
                         String amount3 = a3.getText();
                         String amount4 = a4.getText();
                         float am3 = Float.parseFloat(amount3);
@@ -503,24 +494,24 @@ public class Invoice {
                         float total =  am3 + am4;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb2.isSelected()) {
-                        l18 = new JLabel("oil");
-                        l18.setBounds(445, 450, 300, 30);
-                        f.add(l18);
+                    } else if (ricecb.isSelected()) {
+                        titlelb8 = new JLabel("oil");
+                        titlelb8.setBounds(445, 450, 300, 30);
+                        Invoiceframe.add(titlelb8);
                         String q4 = t5.getText();
                         lq4 = new JLabel();
                         lq4.setText(String.valueOf(q4));
                         lq4.setBounds(600, 450, 300, 30);
-                        f.add(lq4);
+                        Invoiceframe.add(lq4);
                         r4 = new JLabel("50");
                         r4.setBounds(770, 450, 300, 30);
-                        f.add(r4);
+                        Invoiceframe.add(r4);
                         a4 = new JLabel();
                         float amount = 50 * Float.parseFloat(q4);
                         String am = String.valueOf(amount);
                         a4.setText(String.valueOf(am));
                         a4.setBounds(950, 450, 300, 30);
-                        f.add(a4);
+                        Invoiceframe.add(a4);
                         String amount2 = a2.getText();
                         String amount4 = a4.getText();
                         float am2 = Float.parseFloat(amount2);
@@ -528,24 +519,24 @@ public class Invoice {
                         float total = am2  + am4;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb1.isSelected()) {
-                        l18 = new JLabel("oil");
-                        l18.setBounds(445, 450, 300, 30);
-                        f.add(l18);
+                    } else if (wheatcb.isSelected()) {
+                        titlelb8 = new JLabel("oil");
+                        titlelb8.setBounds(445, 450, 300, 30);
+                        Invoiceframe.add(titlelb8);
                         String q4 = t5.getText();
                         lq4 = new JLabel();
                         lq4.setText(String.valueOf(q4));
                         lq4.setBounds(600, 450, 300, 30);
-                        f.add(lq4);
+                        Invoiceframe.add(lq4);
                         r4 = new JLabel("50");
                         r4.setBounds(770, 450, 300, 30);
-                        f.add(r4);
+                        Invoiceframe.add(r4);
                         a4 = new JLabel();
                         float amount = 50 * Float.parseFloat(q4);
                         String am = String.valueOf(amount);
                         a4.setText(String.valueOf(am));
                         a4.setBounds(950, 450, 300, 30);
-                        f.add(a4);
+                        Invoiceframe.add(a4);
                         String amount1 = a1.getText();
                         String amount4 = a4.getText();
                         float am1 = Float.parseFloat(amount1);
@@ -554,45 +545,45 @@ public class Invoice {
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
                     } else {
-                        l18 = new JLabel("oil");
-                        l18.setBounds(445, 430, 300, 30);
-                        f.add(l18);
+                        titlelb8 = new JLabel("oil");
+                        titlelb8.setBounds(445, 430, 300, 30);
+                        Invoiceframe.add(titlelb8);
                         String q4 = t5.getText();
                         lq4 = new JLabel();
                         lq4.setText(String.valueOf(q4));
                         lq4.setBounds(600, 430, 300, 30);
-                        f.add(lq4);
+                        Invoiceframe.add(lq4);
                         r4 = new JLabel("50");
                         r4.setBounds(770, 430, 300, 30);
-                        f.add(r4);
+                        Invoiceframe.add(r4);
                         a4 = new JLabel();
                         float amount = 50 * Float.parseFloat(q4);
                         String am = String.valueOf(amount);
                         a4.setText(String.valueOf(am));
                         a4.setBounds(950, 430, 300, 30);
-                        f.add(a4);
+                        Invoiceframe.add(a4);
                         t7.setText(String.valueOf(am));
                     }
                 }
-                if (cb5.isSelected()) {
-                    if (cb1.isSelected() && cb2.isSelected() && cb3.isSelected() && cb4.isSelected()) {
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 510, 300, 30);
-                        f.add(l19);
+                if (cerealscb.isSelected()) {
+                    if (wheatcb.isSelected() && ricecb.isSelected() && sugarcb.isSelected() && oilcb.isSelected()) {
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 510, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 510, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 510, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a5 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 510, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         String amount1 = a1.getText();
                         String amount2 = a2.getText();
                         String amount3 = a3.getText();
@@ -606,24 +597,24 @@ public class Invoice {
                         float total = am1 + am2 + am3 + am4+am5;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb1.isSelected() && cb2.isSelected() && cb3.isSelected()) {
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 490, 300, 30);
-                        f.add(l19);
+                    } else if (wheatcb.isSelected() && ricecb.isSelected() && sugarcb.isSelected()) {
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 490, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 490, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 490, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a5 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 490, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         String amount1 = a1.getText();
                         String amount2 = a2.getText();
                         String amount3 = a3.getText();
@@ -635,24 +626,24 @@ public class Invoice {
                         float total = am1 + am2 + am3 + am5;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb1.isSelected() && cb2.isSelected() && cb4.isSelected()) {
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 490, 300, 30);
-                        f.add(l19);
+                    } else if (wheatcb.isSelected() && ricecb.isSelected() && oilcb.isSelected()) {
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 490, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 490, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 490, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a5 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 490, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         String amount1 = a1.getText();
                         String amount2 = a2.getText();
                         String amount4 = a4.getText();
@@ -664,24 +655,24 @@ public class Invoice {
                         float total = am1 + am2 + am4+am5;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb1.isSelected() && cb3.isSelected() && cb4.isSelected()) {
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 490, 300, 30);
-                        f.add(l19);
+                    } else if (wheatcb.isSelected() && sugarcb.isSelected() && oilcb.isSelected()) {
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 490, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 490, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 490, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a4 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 490, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         String amount1 = a1.getText();
                         String amount3 = a3.getText();
                         String amount4 = a4.getText();
@@ -693,24 +684,24 @@ public class Invoice {
                         float total = am1  + am3 + am4+am5;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb2.isSelected() && cb3.isSelected() && cb4.isSelected()) {
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 490, 300, 30);
-                        f.add(l19);
+                    } else if (ricecb.isSelected() && sugarcb.isSelected() && oilcb.isSelected()) {
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 490, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 490, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 490, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a5 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 490, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         String amount2 = a2.getText();
                         String amount3 = a3.getText();
                         String amount4 = a4.getText();
@@ -724,24 +715,24 @@ public class Invoice {
                         t7.setText(String.valueOf(tl));
                     }
 
-                    else if (cb1.isSelected() && cb2.isSelected()) {
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 470, 300, 30);
-                        f.add(l19);
+                    else if (wheatcb.isSelected() && ricecb.isSelected()) {
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 470, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 470, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 470, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a5 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 470, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         String amount1 = a1.getText();
                         String amount2 = a2.getText();
                         String amount5 = a5.getText();
@@ -751,24 +742,24 @@ public class Invoice {
                         float total = am1 + am2 + am5;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb1.isSelected() && cb3.isSelected()) {
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 470, 300, 30);
-                        f.add(l19);
+                    } else if (wheatcb.isSelected() && sugarcb.isSelected()) {
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 470, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 470, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 470, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a5 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 470, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         String amount1 = a1.getText();
                         String amount3 = a3.getText();
                         String amount5 = a5.getText();
@@ -778,24 +769,24 @@ public class Invoice {
                         float total = am1 + am3 +am5;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb1.isSelected() && cb4.isSelected()) {
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 470, 300, 30);
-                        f.add(l19);
+                    } else if (wheatcb.isSelected() && oilcb.isSelected()) {
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 470, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 470, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 470, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a5 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 470, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         String amount1 = a1.getText();
                         String amount4 = a4.getText();
                         String amount5 = a4.getText();
@@ -805,24 +796,24 @@ public class Invoice {
                         float total = am1 + am4+am5;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb2.isSelected() && cb3.isSelected()) {
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 470, 300, 30);
-                        f.add(l19);
+                    } else if (ricecb.isSelected() && sugarcb.isSelected()) {
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 470, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 470, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 470, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a5 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 470, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         String amount2 = a2.getText();
                         String amount3 = a3.getText();
                         String amount5 = a5.getText();
@@ -832,24 +823,24 @@ public class Invoice {
                         float total =  am2 + am3 +am5;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb2.isSelected() && cb4.isSelected()) {
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 470, 300, 30);
-                        f.add(l19);
+                    } else if (ricecb.isSelected() && oilcb.isSelected()) {
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 470, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 470, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 470, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a5 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 470, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         String amount2 = a2.getText();
                         String amount4 = a4.getText();
                         String amount5 = a5.getText();
@@ -859,24 +850,24 @@ public class Invoice {
                         float total =  am2  + am4+am5;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb3.isSelected() && cb4.isSelected()) {
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 470, 300, 30);
-                        f.add(l19);
+                    } else if (sugarcb.isSelected() && oilcb.isSelected()) {
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 470, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 470, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 470, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a5 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 470, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         String amount3 = a3.getText();
                         String amount4 = a4.getText();
                         String amount5 = a5.getText();
@@ -886,24 +877,24 @@ public class Invoice {
                         float total =   am3 + am4+am5;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb1.isSelected()) {
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 450, 300, 30);
-                        f.add(l19);
+                    } else if (wheatcb.isSelected()) {
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 450, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 450, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 450, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a5 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 450, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         String amount1 = a1.getText();
                         String amount5 = a5.getText();
                         float am1 = Float.parseFloat(amount1);
@@ -911,24 +902,24 @@ public class Invoice {
                         float total = am1 +am5;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb2.isSelected()) {
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 450, 300, 30);
-                        f.add(l19);
+                    } else if (ricecb.isSelected()) {
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 450, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 450, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 450, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a5 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 450, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         String amount2 = a2.getText();
                         String amount5 = a5.getText();
                         float am2 = Float.parseFloat(amount2);
@@ -936,24 +927,24 @@ public class Invoice {
                         float total =  am2 + am5;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb3.isSelected()) {
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 450, 300, 30);
-                        f.add(l19);
+                    } else if (sugarcb.isSelected()) {
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 450, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 450, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 450, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a5 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 450, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         String amount3 = a3.getText();
                         String amount5 = a5.getText();
                         float am3 = Float.parseFloat(amount3);
@@ -961,24 +952,24 @@ public class Invoice {
                         float total =  am3 + am5;
                         String tl = String.valueOf(total);
                         t7.setText(String.valueOf(tl));
-                    } else if (cb4.isSelected()) {
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 450, 300, 30);
-                        f.add(l19);
+                    } else if (oilcb.isSelected()) {
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 450, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 450, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 450, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a5 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 450, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         String amount4 = a4.getText();
                         String amount5 = a5.getText();
                         float am4 = Float.parseFloat(amount4);
@@ -990,23 +981,23 @@ public class Invoice {
 
                     else {
 
-                        l19 = new JLabel("cerelas");
-                        l19.setBounds(445, 430, 300, 30);
-                        f.add(l19);
+                        titlelb9 = new JLabel("cerelas");
+                        titlelb9.setBounds(445, 430, 300, 30);
+                        Invoiceframe.add(titlelb9);
                         String q5 = t6.getText();
                         lq5 = new JLabel();
                         lq5.setText(String.valueOf(q5));
                         lq5.setBounds(600, 430, 300, 30);
-                        f.add(lq5);
+                        Invoiceframe.add(lq5);
                         r5 = new JLabel("30");
                         r5.setBounds(770, 430, 300, 30);
-                        f.add(r5);
+                        Invoiceframe.add(r5);
                         a5 = new JLabel();
                         float amount = 30 * Float.parseFloat(q5);
                         String am = String.valueOf(amount);
                         a5.setText(String.valueOf(am));
                         a5.setBounds(950, 430, 300, 30);
-                        f.add(a5);
+                        Invoiceframe.add(a5);
                         t7.setText(String.valueOf(am));
 
                     }
@@ -1017,38 +1008,38 @@ public class Invoice {
 
         });
 
-        f.add(cb1);
-        f.add(cb2);
-        f.add(cb3);
-        f.add(cb4);
-        f.add(cb5);
-        f.add(b1);
-        f.add(b2);
-        f.add(b3);
-        f.add(b4);
-        f.add(b5);
+        Invoiceframe.add(wheatcb);
+        Invoiceframe.add(ricecb);
+        Invoiceframe.add(sugarcb);
+        Invoiceframe.add(oilcb);
+        Invoiceframe.add(cerealscb);
+        Invoiceframe.add(generatebttn);
+        Invoiceframe.add(backbttn);
+        Invoiceframe.add(printbttn);
+        Invoiceframe.add(calcibttn);
+        Invoiceframe.add(clearbttn);
 
-        f.add(l1);
-        f.add(l2);
-        f.add(l3);
-        f.add(l4);
-        f.add(t1);
-        f.add(l5);
-        f.add(l6);
-        f.add(l7);
-        f.add(t2);
-        f.add(l8);
-        f.add(t3);
-        f.add(l9);
-        f.add(l10);
-        f.add(l11);
-        f.add(t4);
-        f.add(t5);
-        f.add(t6);
-        f.setSize(1650,1080);
-        f.setLayout(null);
+        Invoiceframe.add(titlelb);
+        Invoiceframe.add(addresslb);
+        Invoiceframe.add(billnolb);
+        Invoiceframe.add(datelb);
+        Invoiceframe.add(t1);
+        Invoiceframe.add(itemlb);
+        Invoiceframe.add(qntlb);
+        Invoiceframe.add(wheatlb);
+        Invoiceframe.add(t2);
+        Invoiceframe.add(ricelb);
+        Invoiceframe.add(t3);
+        Invoiceframe.add(sugarlb);
+        Invoiceframe.add(oillb);
+        Invoiceframe.add(cerealslb);
+        Invoiceframe.add(t4);
+        Invoiceframe.add(t5);
+        Invoiceframe.add(t6);
+        Invoiceframe.setSize(1650,1080);
+        Invoiceframe.setLayout(null);
 
-        f.setVisible(true);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Invoiceframe.setVisible(true);
+        Invoiceframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }

@@ -5,10 +5,7 @@ import com.formdev.flatlaf.*;
 
 import com.vit.billing.pages.Login;
 
-/**
- * Hello world!
- *
- */
+
 public class App {
     public static void main(String[] args) {
         try {

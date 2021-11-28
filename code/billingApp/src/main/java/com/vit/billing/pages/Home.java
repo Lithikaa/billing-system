@@ -45,7 +45,10 @@ public class Home {
 
     cancelBttn.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent e) {
-        System.exit(0);
+         new Login();
+          
+           homeFrame.setVisible(false);
+            homeFrame.dispose();
       }
     });
 
