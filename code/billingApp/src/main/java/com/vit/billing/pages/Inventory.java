@@ -73,6 +73,7 @@ public class Inventory {
 
                 frame.setVisible(false);
                 frame.dispose();
+                System.out.println("Logout sucessful");
             }
         });
 

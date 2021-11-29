@@ -118,6 +118,7 @@ public class Invoice {
 
                 Invoiceframe.setVisible(false);
                 Invoiceframe.dispose();
+                System.out.println("Logout sucessful");
             }
         });
         clearbttn.addActionListener(new java.awt.event.ActionListener() {
