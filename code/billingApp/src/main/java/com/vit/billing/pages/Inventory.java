@@ -67,6 +67,14 @@ public class Inventory {
                 frame.dispose();
             }
         });
+        logoutButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                new Login();
+
+                frame.setVisible(false);
+                frame.dispose();
+            }
+        });
 
         topPane = new JPanel();
         topPane.setLayout(new BorderLayout());

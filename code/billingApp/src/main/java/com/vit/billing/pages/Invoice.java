@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 public class Invoice {
 
-    JButton generatebttn, backbttn, printbttn, calcibttn, clearbttn;
+    JButton generatebttn, backbttn, printbttn, calcibttn, clearbttn,logoutbttn;
     JCheckBox wheatcb, ricecb, sugarcb, oilcb, cerealscb;
 
     JLabel titlelb, addresslb, billnolb, datelb, itemlb, qntlb, wheatlb, ricelb, sugarlb, oillb, cerealslb, lspl, productlb, dashlb2, quantitylb, titlelb5, titlelb6, titlelb7, titlelb8, titlelb9, ratelb, amountlb, dashlb3,
@@ -108,8 +108,18 @@ public class Invoice {
         printbttn.setBounds(910, 600, 120, 30);
         calcibttn = new JButton("Calculator");
         calcibttn.setBounds(360, 95, 120, 30);
+        logoutbttn = new JButton("Logout");
+        logoutbttn.setBounds(360, 25, 120, 30);
         clearbttn = new JButton("Clear");
         clearbttn.setBounds(360, 600, 120, 30);
+        logoutbttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                new Login();
+
+                Invoiceframe.setVisible(false);
+                Invoiceframe.dispose();
+            }
+        });
         clearbttn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent e) {
                 if (wheatcb.isSelected()) {
@@ -1018,6 +1028,7 @@ public class Invoice {
         Invoiceframe.add(printbttn);
         Invoiceframe.add(calcibttn);
         Invoiceframe.add(clearbttn);
+        Invoiceframe.add(logoutbttn);
 
         Invoiceframe.add(titlelb);
         Invoiceframe.add(addresslb);
